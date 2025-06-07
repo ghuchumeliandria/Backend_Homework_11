@@ -22,7 +22,6 @@ expRouter.post("/", upload.single("avatar"), async (req, res) => {
 
   if (!name || !expense || !age)
     return res.status(400).json({ error: "invalid credentials" });
-
   const lastId = expenses[expenses.length - 1]?.id || 0;
 
   const newExpenses = {
